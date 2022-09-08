@@ -3,16 +3,53 @@
 <head>
   <title>애니메이션 티어</title>
   <meta charset="utf-8">
+  <style>
+    body{
+      background-color: #fff9c4;
+      color: #212121;
+    }
+    h3{
+      font-style: italic;
+    }
+    a{
+      color: #96def2;
+    }
+  </style>
+  <script>
+    function dayornight(self){
+      var tar = document.querySelector('body');
+      if(tar.dataset.mode === 'Night'){
+        tar.style.backgroundColor='#fff9c4';
+        tar.style.color ='#212121';
+        tar.dataset.mode ='Day';
+        self.value = 'Night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = '#96def2';
+          i++;
+        }
+      }else{
+        tar.style.backgroundColor='#263238';
+        tar.style.color ='#e3f2fd';
+        tar.dataset.mode ='Night';
+        self.value='Day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = '#9ff288';
+          i++;
+          }
+        }
+      }
+  </script>
 </head>
 <body>
   <h1><a href="index.html">Anime</a></h1>
-  <input type="button" value="Dark" onclick="
-  document.querySelector('body').style.backgroundColor='#263238';
-  document.querySelector('body').style.color='#e3f2fd';
-  ">
-  <input type="button" value="Day" onclick="
-  document.querySelector('body').style.backgroundColor='#fff9c4';
-  document.querySelector('body').style.color='#212121'
+  <input type="button" value="Night" onclick="
+  dayornight(this);
   ">
   <ul>
     <li><a href="done.html">다 본 애니메이션</a></li>
@@ -28,20 +65,57 @@
   <p>이 페이지는 여태 봐온 애니메이션에 대한 <strong><u>개인적 견해</u></strong>를 바탕으로 티어를 정리하는 표입니다.</p>
 
   <p>판정 기준:순수 재미, 작품성, 연출, 신선함, ost조화, 몰입감, 후유증, 작화, 스토리 등</p>
+ 
+   
+
+ 
   
   <h3>0티어</h3>
-  <ol>
-    <li>나의 히어로 아카데미아</li>
-    <li>리제로</li>
-    <li>카구야님은 고백 받고 싶어</li>
-    <li>86</li>
-  </ol>
-  <h3>1티어</h3>
-  <h3>2티어</h3>
-  <h3>3티어</h3>
-  <h3>4티어</h3>
-  <h3>5티어</h3>
+  <ul>
+    <script>
+      function show(self){
+        var i =0;
+      while(i<self.length){
+        document.writeln('<li>'+self[i]+'</li>');
+        i++
+      }
 
+      }
+      var zero = ["나히아","리제로","86"];
+      show(zero);
+    </script>
+  </ul>
+  <h3>1티어</h3>
+  <ul>
+    <script>
+      var one = ["귀멸의 칼날","카구야 님은 고백받고 싶어","스파이 패밀리","블랙클로버"];
+      show(one);
+    </script>
+  </ul>
+  <h3>2티어</h3>
+  <ul>
+    <script>
+      var two = ["도쿄구울","전생했더니 슬라임이었던 건에 대하여"];
+      show(two);
+    </script>
+  </ul>
+  <h3>3티어</h3>
+  <ul>
+    <script>
+      var three = ["소드아트 온라인","그 비스크돌은 사랑을 한다"];
+      var i =0;
+      show(three);
+    </script>
+  </ul>
+  <h3>4티어</h3>
+  <ul>
+    <script>
+      var four = ["어서오세요 실력지상주의 교실에"];
+      show(four);
+    </script>
+  </ul>
+  <h3>5티어</h3>
+    아직까진 없음
    
   </body>
 </html>

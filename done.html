@@ -3,16 +3,50 @@
 <head>
   <title>이미 본 애니</title>
   <meta charset="utf-8">
+  <style>  body{
+    background-color: #fff9c4;
+    color: #212121;
+  }
+  a{
+    color: #96def2;
+  }
+  </style>
+  <script>
+    function dayornight(self){
+      var tar = document.querySelector('body');
+      if(tar.dataset.mode === 'Night'){
+        tar.style.backgroundColor='#fff9c4';
+        tar.style.color ='#212121';
+        tar.dataset.mode ='Day';
+        self.value = 'Night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = '#96def2';
+          i++;
+        }
+      }else{
+        tar.style.backgroundColor='#263238';
+        tar.style.color ='#e3f2fd';
+        tar.dataset.mode ='Night';
+        self.value='Day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = '#9ff288';
+          i++;
+          }
+        }
+      }
+  </script>
+
 </head>
 <body>
   <h1><a href="index.html">Anime</a></h1>
-  <input type="button" value="Dark" onclick="
-  document.querySelector('body').style.backgroundColor='#263238';
-  document.querySelector('body').style.color='#e3f2fd';
-  ">
-  <input type="button" value="Day" onclick="
-  document.querySelector('body').style.backgroundColor='#fff9c4';
-  document.querySelector('body').style.color='#212121'
+  <input type="button" value="Night" onclick="
+  dayornight(this);
   ">
   <ul>
     <li><a href="done.html">다 본 애니메이션</a></li>

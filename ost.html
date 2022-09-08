@@ -3,16 +3,61 @@
 <head>
   <title>애니메이션 플레이리스트</title>
   <meta charset="utf-8">
+  <style>
+   body{
+      background-color: #fff9c4;
+      color: #212121;
+    }
+   
+    .naruto{
+      color: #e6b01c;
+      font-weight: bolder;
+    }
+    .tokyo{
+      color: #610205;
+    }
+    #first{
+      font-weight: bolder;
+    }
+    a{
+      color: #96def2;
+    }
+  </style>
+  <script>
+    function dayornight(self){
+      var tar = document.querySelector('body');
+      if(tar.dataset.mode === 'Night'){
+        tar.style.backgroundColor='#fff9c4';
+        tar.style.color ='#212121';
+        tar.dataset.mode ='Day';
+        self.value = 'Night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = '#96def2';
+          i++;
+        }
+      }else{
+        tar.style.backgroundColor='#263238';
+        tar.style.color ='#e3f2fd';
+        tar.dataset.mode ='Night';
+        self.value='Day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = '#9ff288';
+          i++;
+          }
+        }
+      }
+  </script>
 </head>
 <body>
   <h1><a href="index.html">Anime</a></h1>
-  <input type="button" value="Dark" onclick="
-  document.querySelector('body').style.backgroundColor='#263238';
-  document.querySelector('body').style.color='#e3f2fd';
-  ">
-  <input type="button" value="Day" onclick="
-  document.querySelector('body').style.backgroundColor='#fff9c4';
-  document.querySelector('body').style.color='#212121'
+  <input type="button" value="Night" onclick="
+  dayornight(this);
   ">
   <ul>
     <li><a href="done.html">다 본 애니메이션</a></li>
@@ -24,44 +69,44 @@
     <li><a href="ost.html">플레이리스트</a></li>
   </ol>
  
-  <h2>애니메이션 목록</h2>
-  <p>이 페이지는 제 플레이리스트에 있는 애니 노래들이며 순서는 순위와 관계 없습니다.</p>
+  <div id="first">애니메이션 목록</div>
+  <p>이 페이지는 제 플레이리스트에 있는 애니 노래들이며 <span style="font-weight:bold;">순서는 순위와 관계 없습니다.</span></p>
   
 
   <ol>
-    <li>나루토 질풍전 - 실루엣</li>
+    <li><span class="naruto">나루토 질풍전</span> - 실루엣</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/USn19iuBJv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>나루토 질풍전 - sign</li>
+    <li><span class="naruto">나루토 질풍전</span> - sign</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/qvHftG-7Atc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>도쿄구울 - Unravel</li>
+    <li><span class="tokyo">도쿄구울</span> - Unravel</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/uMeR2W19wT0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>바케모노가타리 - 네가 모르는 이야기</li>
+    <li><span>바케모노가타리</span> - 네가 모르는 이야기</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/eGsiwiaEN5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>페이트 스테이 나이트 - Brave shine</li>
+    <li><span>페이트 스테이 나이트</span> - Brave shine</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/wMybECC5j30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>불꽃소방대 - 인페르노</li>
+    <li><span>불꽃소방대</span> - 인페르노</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/JBqxVX_LXvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>4월은 너의 거짓말 - Orange</li>
+    <li><span>4월은 너의 거짓말</span> - Orange</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/u99MBo4pACc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>나의 히어로 아카데미아 - 피스사인</li>
+    <li><span>나의 히어로 아카데미아</span> - 피스사인</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/Q7w5IMyJ3pM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>문호 스트레이독스 - 이름을 부를게</li>
+    <li><span>문호 스트레이독스</span> - 이름을 부를게</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/FoJSVfgqBtg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>리제로 - Styx Helix</li>
+    <li><span>리제로</span> - Styx Helix</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/GGaNuB_70ug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>리제로 - Stay alive</li>
+    <li><span>리제로</span> - Stay alive</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/dRvRy8d5qzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>강철의 연금술사 - Rain</li>
+    <li><span>강철의 연금술사</span> - Rain</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/u09lkY-Pfhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>에이티식스 - Hands up to the sky</li>
+    <li><span>에이티식스</span> - Hands up to the sky</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/Kp78niwbUNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>에이티식스 - avid</li>
+    <li><span>에이티식스</span> - avid</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/vMdlbE-MzF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>귀멸의 칼날 - 불꽃</li>
+    <li><span>귀멸의 칼날</span> - 불꽃</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/YxJVocxypbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>소드아트온라인 - 증표</li>
+    <li><span>소드아트온라인</span> - 증표</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/HPesI7BVm6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <li>소드아트온라인 - crossing field</li>
+    <li><span>소드아트온라인</span> - crossing field</li>
     <p><iframe width="560" height="315" src="https://www.youtube.com/embed/jTfO0Q3DxYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
   </ol>
 
