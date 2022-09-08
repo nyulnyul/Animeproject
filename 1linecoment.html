@@ -9,40 +9,12 @@
       color: #212121;
     }
     a{
-      color: #96def2;
+      color: #9feb65;
     }
     
   </style>
-  <script>
-    function dayornight(self){
-      var tar = document.querySelector('body');
-      if(tar.dataset.mode === 'Night'){
-        tar.style.backgroundColor='#fff9c4';
-        tar.style.color ='#212121';
-        tar.dataset.mode ='Day';
-        self.value = 'Night';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = '#96def2';
-          i++;
-        }
-      }else{
-        tar.style.backgroundColor='#263238';
-        tar.style.color ='#e3f2fd';
-        tar.dataset.mode ='Night';
-        self.value='Day';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = '#9ff288';
-          i++;
-          }
-        }
-      }
-  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="colors.js"> </script>
 </head>
 <body>
   <h1><a href="index.html">Anime</a></h1>
@@ -75,6 +47,8 @@
     <li><a href="도구.html">도쿄구울</a></li>
     <li><a href="실력.html">어서오세요 실력지상주의 교실에</a></li>
     <li><a href="86.html">에이티식스</a></li>
+    <li><a href="청돼.html">청춘 돼지는 바니걸 선배의 꿈을 꾸지 않는다</a></li>
+
   </ol>
 
     

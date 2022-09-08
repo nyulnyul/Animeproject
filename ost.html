@@ -20,39 +20,11 @@
       font-weight: bolder;
     }
     a{
-      color: #96def2;
+      color: #9feb65;
     }
   </style>
-  <script>
-    function dayornight(self){
-      var tar = document.querySelector('body');
-      if(tar.dataset.mode === 'Night'){
-        tar.style.backgroundColor='#fff9c4';
-        tar.style.color ='#212121';
-        tar.dataset.mode ='Day';
-        self.value = 'Night';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = '#96def2';
-          i++;
-        }
-      }else{
-        tar.style.backgroundColor='#263238';
-        tar.style.color ='#e3f2fd';
-        tar.dataset.mode ='Night';
-        self.value='Day';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = '#9ff288';
-          i++;
-          }
-        }
-      }
-  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="colors.js"> </script>
 </head>
 <body>
   <h1><a href="index.html">Anime</a></h1>
