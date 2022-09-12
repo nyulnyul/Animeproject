@@ -24,12 +24,12 @@ var links={
   function dayornight(self){
     var tar = document.querySelector('body');
     if(tar.dataset.mode === 'Night'){
-      Body.setBackgroundColor('#fff9c4');
+      Body.setBackgroundColor('powderblue');
       Body.setBcolor('#212121');
       tar.dataset.mode ='Day';
       self.value = 'Night';
 
-     links.setColor('#9feb65');
+     links.setColor('white');
     }else{
       Body.setBackgroundColor('#263238');
       Body.setBcolor('#e3f2fd');
