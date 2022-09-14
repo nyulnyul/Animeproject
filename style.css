@@ -1,0 +1,13 @@
+body{
+    background-color: powderblue;
+    color: #212121;
+  }
+  a{
+    color: whitesmoke;
+  }
+  .center{
+    text-align: center;
+    font-family: serif, monospace;
+    font-weight: bolder;
+    line-height: 120px;
+  }
