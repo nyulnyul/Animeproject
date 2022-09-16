@@ -1,6 +1,8 @@
 body{
     background-color: powderblue;
     color: #212121;
+    display: flex;
+    justify-content: center;
   }
   a{
     color: whitesmoke;
@@ -11,3 +13,42 @@ body{
     font-weight: bolder;
     line-height: 120px;
   }
+  .container{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    border: 1px solid wheat;
+  }
+  header{
+    border-bottom: 1px solid red;
+  }
+  footer{
+    border-top: 1px solid blue;
+    text-align: center;
+  }
+  
+  @media(min-width:500px) {
+    .content{
+    display: flex;
+    height: auto;
+     }
+  }
+  .content nav{
+    border-right: 1px solid pink;
+    padding: 10px;
+  }
+  .content aside{
+    border-left: 1px solid green;
+    
+  }
+  .content main{
+    text-align: center;
+    padding: 20px;
+  }
+  nav , aside{
+    flex-basis: 150px;
+    flex-shrink: 1;
+  }
+  nav{order: 0;}
+  main{order: 1;}
+  aside{order: 2;}

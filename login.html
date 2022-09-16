@@ -2,13 +2,32 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">  
-  
+  <style>
+    .container{
+      background-color: aliceblue;
+      height: 300px;
+      display:flex;
+      flex-direction: column-reverse;
+      
+    }
+    .item{
+      background-color: azure;
+      color: black;
+      border: 1px solid white;
+      flex: grow 1;
+    }
+    .item:nth-child(0){
+      flex-basis: 300px;
+    }
+  </style>
 </head>
 <body>
-   <form action="https://nyulnyul.github.io/Animeproject/index.html" method="get">
-    <p> ID : <input type="text" name="id" value="아이디를 입력하세요"></p>
-    <p> PW : <input type="password" name="pw" value="비밀번호"></p>
-    <input type="submit">
-   </form>
+  <div class="container">
+     <form action="https://nyulnyul.github.io/Animeproject/index.html" method="get">
+      <div class="item"> ID : <input type="text" name="id" value="아이디를 입력하세요"></div>
+      <div class="item"> PW : <input type="password" name="pw" value="비밀번호"></div>
+      <input type="submit">
+    </form>
+  </div>
   </body>
 </html>
