@@ -48,6 +48,7 @@ body{
   nav , aside{
     flex-basis: 150px;
     flex-shrink: 1;
+    
   }
   nav{order: 0;}
   main{order: 1;}
