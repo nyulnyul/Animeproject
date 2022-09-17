@@ -12,19 +12,27 @@ body{
     font-family: serif, monospace;
     font-weight: bolder;
     line-height: 120px;
+    transform: skew(8deg,7deg);
+    transition: all 0.3s;
+    
+  }
+  .center:hover{
+    transform: rotate(180deg);
   }
   .container{
     display: flex;
     flex-direction: column;
-    width: 800px;
+    width: 900px;
     border: 1px solid wheat;
   }
   header{
     border-bottom: 1px solid red;
+
   }
   footer{
     border-top: 1px solid blue;
     text-align: center;
+    clear: both;
   }
   
   @media(min-width:500px) {
@@ -36,20 +44,30 @@ body{
   .content nav{
     border-right: 1px solid pink;
     padding: 10px;
+    float: left;
   }
   .content aside{
     border-left: 1px solid green;
+    float: right;
+    
     
   }
   .content main{
     text-align: center;
     padding: 20px;
-  }
+    /* background-image: url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODAxMTZfMjY2%2FMDAxNTE2MTA5ODQ1OTY5.6m9xGc1FXse7bMPxG5jqCS_NyVJ0ksTeHbG9R8Ya5-Eg.Rp-RtpaII66HKNTm1cV8BRjcqtMu93lIqZ2Uv8eKTFQg.JPEG.ekdfl56%2Fddddd.jpg&type=l340_165'); */
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    }
   nav , aside{
     flex-basis: 150px;
     flex-shrink: 1;
     
   }
-  nav{order: 0;}
+  nav{
+    order: 0;
+    
+    }
   main{order: 1;}
   aside{order: 2;}
